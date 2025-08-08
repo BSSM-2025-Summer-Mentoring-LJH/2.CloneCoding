@@ -6,6 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
         "이사짐", "알바", "근처 맛집", "투표", "동네친구"
     ];
 
+    const categories = [
+        { name: "중고거래", icon: "assets/중고거래.png" },
+        { name: "알바", icon: "assets/알바.png" },
+        { name: "부동산", icon: "assets/부동산.png" },
+        { name: "중고차", icon: "assets/중고차.png" },
+        { name: "동네업체", icon: "assets/동네업체.png" },
+        { name: "동네생활", icon: "assets/동네생활.png" },
+        { name: "모임", icon: "assets/모임.png" }
+    ];
+
+    const neighbors = [
+        "송도동", "역상동", "물금읍", "봉담읍", "배방읍", "서초동", "옥정동", "신림동",
+        "불당동", "향남읍", "청담동", "다산동", "별내동", "화도읍", "다사읍", "마곡동", 
+        "압구정동", "배곧동", "고덕동", "오창읍"
+    ]
+
     const listContainer = document.querySelector('.popular-search-list');
     popularKeywords.forEach(keyword => {
         const li = document.createElement('li');
@@ -20,6 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         li.appendChild(button);
         listContainer.appendChild(li);
     });
+
+    const section = document.querySelector(".category-and-neighborhood");
 
     const searchButton = document.querySelector('.search-button');
     searchButton.addEventListener('click', () => {
