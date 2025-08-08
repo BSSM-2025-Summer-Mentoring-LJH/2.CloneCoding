@@ -28,11 +28,17 @@ button {
     padding: 10px 0;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
 .logo-button {
     display: flex;
     align-items: center;
     font-size: 24px;
     font-weight: bold;
+    color: inherit;
 }
 
 .logo {
@@ -83,6 +89,7 @@ button {
     padding: 0 20px;
     font-weight: bold;
     background-color: #333;
+    color: inherit;
 }
 
 .arrow-down {
@@ -124,6 +131,7 @@ button {
     padding: 0 20px;
     font-size: 24px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .popular-searches {
@@ -131,7 +139,7 @@ button {
     margin-top: 20px;
 }
 
-.popular-searches span {
+.popular-searches > span {
     font-size: 14px;
     color: #aaa;
     margin-right: 10px;
@@ -152,6 +160,7 @@ button {
 .popular-search-button {
     color: #999;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .category-and-neighborhood {
@@ -173,6 +182,7 @@ button {
     background-color: #2b2b2b; 
     border-radius: 12px;
     padding: 20px 0; 
+    cursor: pointer;
 }
 
 .icon-box {
@@ -212,4 +222,5 @@ button {
     color: #fff;
     padding: 10px 16px;
     border-radius: 20px;
+    cursor: pointer;
 }

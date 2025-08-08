@@ -63,3 +63,5 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('앱 다운로드 페이지로 이동합니다.');
     });
 });
+
+
