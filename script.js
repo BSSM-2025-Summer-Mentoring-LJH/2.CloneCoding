@@ -38,6 +38,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const section = document.querySelector(".category-and-neighborhood");
+    const categoriesDiv = document.createElement('div');
+    categoriesDiv.className = 'categories';
+
+    categories.forEach(cat => {
+        const button = document.createElement('button');
+        button.className = 'category-item-button';
+        button.innerHTML = `
+            <div class="icon-box">
+                <img src="${cat.icon}" alt="${cat.name} 아이콘" class="category-icon">
+            </div>
+            <p>${cat.name}</p>
+        `;
+        categoriesDiv.appendChild(button);
+    });
+
+    const neighborhoodsDiv = document.createElement('div');
+    neighborhoodsDiv.className = 'neighborhoods';
+
+    neighbors.forEach(nei => {
+        const button = document.createElement('button');
+        button.className = 'neighborhood-button';
+        button.textContent = nei;
+        neighborhoodsDiv.appendChild(button);
+    });
+
+    section.appendChild(categoriesDiv);
+    section.appendChild(neighborhoodsDiv);
+
+    
 
     const searchButton = document.querySelector('.search-button');
     searchButton.addEventListener('click', () => {
