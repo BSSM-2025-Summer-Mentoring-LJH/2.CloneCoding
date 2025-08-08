@@ -7,13 +7,19 @@ body {
 }
 
 button {
-    background-color: transparent;
-    border: none;
-    color: inherit;
+    background-color: #333;
+    color: #fff;           
+    border: 1px solid #333;
+    padding: 8px 16px;
+    border-radius: 4px;
     cursor: pointer;
-    padding: 0;
-    font-family: inherit;
+    transition: background-color 0.3s ease;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
 }
+
+button:hover {
+    background-color: #777777;
+  }
 
 .container {
     max-width: 980px;
@@ -34,12 +40,21 @@ button {
 }
 
 .logo-button {
+    background-color: #000;
+    color: #ff6600;   
+    border: #000;
     display: flex;
     align-items: center;
     font-size: 24px;
     font-weight: bold;
-    color: inherit;
+    padding: 5px 10px; 
+    border-radius: 4px; 
 }
+
+.logo-button:hover {
+    background-color: transparent;
+    cursor: default; 
+  }
 
 .logo {
     width: 32px;
@@ -48,7 +63,7 @@ button {
 }
 
 .download-button {
-    background-color: #333;
+    background-color: #ff6600;
     color: #fff;
     padding: 10px 16px;
     border-radius: 6px;
@@ -78,38 +93,54 @@ button {
 
 .search-bar-container {
     display: flex;
-    background-color: #333;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: transparent;
     border-radius: 8px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .location-dropdown-button {
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 10px 20px;
     font-weight: bold;
-    background-color: #333;
-    color: inherit;
+    background-color: #f2f2f2;
+    color: #333;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+.pin-icon {
+    font-size: 20px;
+    margin-right: 8px;
 }
 
 .arrow-down {
     margin-left: 8px;
     font-size: 10px;
+    color: #333;
 }
 
 .search-input-container {
     display: flex;
     flex-grow: 1;
-    background-color: #2b2b2b;
+    background-color: #1a1a1a;
+    border: 1px solid #555;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 0 5px;
 }
 
 .search-category {
     background-color: transparent;
     color: #fff;
     border: none;
-    padding: 10px;
+    padding: 10px 0;
     font-size: 16px;
     border-right: 1px solid #444;
+    width: 100px;
 }
 
 .search-input {
@@ -126,10 +157,15 @@ button {
 }
 
 .search-button {
-    background-color: #2b2b2b;
-    color: #fff;
-    padding: 0 20px;
-    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -155,12 +191,24 @@ button {
 .popular-search-list li {
     display: inline-block;
     margin-right: 10px;
+    margin-bottom: 8px;
 }
 
 .popular-search-button {
-    color: #999;
+    color: #d4d4d4;         
     font-size: 14px;
-    cursor: pointer;
+    cursor: default;      
+    background: none;      
+    border: none;        
+    padding: 0;
+    text-decoration: none; 
+    background-color: transparent;
+    pointer-events: auto;
+}
+
+.popular-search-button:hover {
+    text-decoration: underline;
+    background-color: transparent; 
 }
 
 .category-and-neighborhood {
@@ -174,26 +222,31 @@ button {
 }
 
 .category-item-button {
+    position: relative; 
+    align-items: center;
+    justify-content: flex-end;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 120px; 
-    background-color: #2b2b2b; 
-    border-radius: 12px;
-    padding: 20px 0; 
+    height: 120px;
+    background-color: #2f3239; 
+    border-radius: 20px; 
+    padding: 20px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 0 0 1px #2f3239; 
 }
 
+
 .icon-box {
-    width: 60px;
-    height: 60px;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px; 
-    background-color: transparent;
-    border-radius: 0;
+    position: absolute; 
+    top: 12px;
+    left: 12px;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 0; 
 }
 
 .category-icon {
@@ -202,25 +255,33 @@ button {
     object-fit: contain;
 }
 
+.category-item-button:hover {
+    background-color: #3d414a; 
+}
+
 .category-item-button p {
     font-size: 16px;
     font-weight: bold;
-    color: #fff;
+    color: #f2f2f2;
     margin: 0;
 }
 
 .neighborhoods {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(11, auto); 
+    grid-auto-rows: min-content;
     gap: 10px;
+    justify-content: start; 
     margin-top: 40px;
-}
+  }
 
-.neighborhood-button {
+  .neighborhood-button {
     background-color: #333;
     color: #fff;
     padding: 10px 16px;
     border-radius: 20px;
     cursor: pointer;
-}
+    white-space: nowrap;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
