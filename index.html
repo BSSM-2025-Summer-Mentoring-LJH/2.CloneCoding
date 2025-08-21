@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당근</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-left">
+                <button class="logo-button">
+                    <img src="assets/당근.png" alt="당근 로고" class="logo">
+                    <span>당근</span>
+                </button>
+            </div>
+            <button class="download-button">앱 다운로드</button>
+        </header>
+
+        <main class="main-content">
+            <h1 class="main-title">
+                <span class="location-icon">📍</span> 화명동에서 맛집 찾고 계신가요?
+            </h1>
+            <section class="search-section">
+                <div class="search-bar-container">
+                    <button class="location-dropdown-button">
+                        <span>📍화명동</span>
+                        <span class="arrow-down">▼</span>
+                    </button>
+                    <div class="search-input-container">
+                        <select class="search-category">
+                            <option>중고거래</option>
+                        </select>
+                        <input type="text" class="search-input" placeholder="검색어를 입력해주세요">
+                        <button class="search-button">→</button>
+                    </div>
+                </div>
+                <div class="popular-searches">
+                    <span>인기 검색어</span>
+                    <ul class="popular-search-list">
+                    </ul>
+                </div>
+            </section>
+
+            <section class="category-and-neighborhood">
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>     
+</body>
+</html>
